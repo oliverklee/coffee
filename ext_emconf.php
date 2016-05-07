@@ -11,32 +11,32 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Coffee example',
-	'description' => 'Demo extension for PHPUnit workshops with TYPO3',
-	'category' => 'plugin',
-	'author' => 'Oliver Klee',
-	'author_email' => 'typo3-coding@oliverklee.de',
-	'author_company' => 'oliverklee.de',
-	'shy' => '',
-	'priority' => '',
-	'module' => '',
-	'state' => 'alpha',
-	'internal' => '',
-	'uploadfolder' => '0',
-	'createDirs' => '',
-	'modify_tables' => '',
-	'clearCacheOnLoad' => 0,
-	'lockType' => '',
-	'version' => '',
-	'constraints' => array(
-		'depends' => array(
-			'extbase' => '6.2.0-7.0.99',
-			'fluid' => '6.2.0-7.0.99',
-			'typo3' => '6.2.0-7.0.99',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
+    'title' => 'Coffee example',
+    'description' => 'Demo extension for PHPUnit workshops with TYPO3',
+    'category' => 'plugin',
+    'author' => 'Oliver Klee',
+    'author_email' => 'typo3-coding@oliverklee.de',
+    'author_company' => 'oliverklee.de',
+    'shy' => '',
+    'priority' => '',
+    'module' => '',
+    'state' => 'alpha',
+    'internal' => '',
+    'uploadfolder' => '0',
+    'createDirs' => '',
+    'modify_tables' => '',
+    'clearCacheOnLoad' => 0,
+    'lockType' => '',
+    'version' => '',
+    'constraints' => array(
+        'depends' => array(
+            'extbase' => '6.2.0-7.0.99',
+            'fluid' => '6.2.0-7.0.99',
+            'typo3' => '6.2.0-7.0.99',
+        ),
+        'conflicts' => array(
+        ),
+        'suggests' => array(
+        ),
+    ),
 );

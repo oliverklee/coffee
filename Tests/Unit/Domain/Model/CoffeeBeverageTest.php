@@ -19,20 +19,23 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
  *
  * @author Oliver Klee <typo3-coding@oliverklee.de>
  */
-class CoffeeBeverageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
-	/**
-	 * @var \OliverKlee\Coffee\Domain\Model\CoffeeBeverage
-	 */
-	protected $subject = NULL;
+class CoffeeBeverageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+{
+    /**
+     * @var \OliverKlee\Coffee\Domain\Model\CoffeeBeverage
+     */
+    protected $subject = null;
 
-	protected function setUp() {
-		$this->subject = new \OliverKlee\Coffee\Domain\Model\CoffeeBeverage();
-	}
+    protected function setUp()
+    {
+        $this->subject = new \OliverKlee\Coffee\Domain\Model\CoffeeBeverage();
+    }
 
-	/**
-	 * @test
-	 */
-	public function canBeInstantiated() {
-		self::assertInstanceOf('OliverKlee\\Coffee\\Domain\\Model\\CoffeeBeverage', $this->subject);
-	}
+    /**
+     * @test
+     */
+    public function canBeInstantiated()
+    {
+        self::assertInstanceOf('OliverKlee\\Coffee\\Domain\\Model\\CoffeeBeverage', $this->subject);
+    }
 }

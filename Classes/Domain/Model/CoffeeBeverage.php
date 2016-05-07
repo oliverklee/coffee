@@ -19,5 +19,6 @@ namespace OliverKlee\Coffee\Domain\Model;
  *
  * @author Oliver Klee <typo3-coding@oliverklee.de>
  */
-class CoffeeBeverage extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class CoffeeBeverage extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+{
 }
