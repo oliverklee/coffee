@@ -13,6 +13,7 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
  *
  * The TYPO3 project - inspiring people to share!
  */
+use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
 
 /**
  * Test case.
@@ -22,13 +23,13 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 class CoffeeBeverageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \OliverKlee\Coffee\Domain\Model\CoffeeBeverage
+     * @var CoffeeBeverage
      */
     protected $subject = null;
 
     protected function setUp()
     {
-        $this->subject = new \OliverKlee\Coffee\Domain\Model\CoffeeBeverage();
+        $this->subject = new CoffeeBeverage();
     }
 
     /**
@@ -36,6 +37,6 @@ class CoffeeBeverageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function canBeInstantiated()
     {
-        self::assertInstanceOf('OliverKlee\\Coffee\\Domain\\Model\\CoffeeBeverage', $this->subject);
+        self::assertInstanceOf(CoffeeBeverage::class, $this->subject);
     }
 }
