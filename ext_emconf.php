@@ -10,7 +10,7 @@
  * "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => 'Coffee example',
     'description' => 'Demo extension for PHPUnit workshops with TYPO3',
     'category' => 'plugin',
@@ -28,15 +28,15 @@ $EM_CONF[$_EXTKEY] = array(
     'clearCacheOnLoad' => 0,
     'lockType' => '',
     'version' => '',
-    'constraints' => array(
-        'depends' => array(
+    'constraints' => [
+        'depends' => [
             'extbase' => '6.2.0-7.0.99',
             'fluid' => '6.2.0-7.0.99',
             'typo3' => '6.2.0-7.0.99',
-        ),
-        'conflicts' => array(
-        ),
-        'suggests' => array(
-        ),
-    ),
-);
+        ],
+        'conflicts' => [
+        ],
+        'suggests' => [
+        ],
+    ],
+];
