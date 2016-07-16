@@ -23,6 +23,11 @@ use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
 class CoffeeBeverageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
+     * @var bool
+     */
+    protected $backupGlobals = false;
+
+    /**
      * @var CoffeeBeverage
      */
     protected $subject = null;
