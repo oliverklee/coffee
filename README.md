@@ -33,3 +33,5 @@ I also frequently give workshops at the TYPO3 Developer Days.
   for using Selenium with PHPUnit
 * [Anagram finder](https://github.com/oliverklee/anagram-finder)
   is the finished result of a code kata for TDD
+* [TDD Seed](https://github.com/oliverklee/tdd-seed)
+  for starting PHPUnit projects with Composer (without TYPO3 CMS)
