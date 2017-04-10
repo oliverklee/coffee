@@ -37,4 +37,10 @@ $EM_CONF[$_EXTKEY] = [
         'suggests' => [
         ],
     ],
+    'autoload' => [
+        'psr-4' => [
+            'OliverKlee\\Coffee\\' => 'Classes/',
+            'OliverKlee\\Coffee\\Tests\\' => 'Tests/',
+        ],
+    ],
 ];
