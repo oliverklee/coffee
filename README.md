@@ -6,6 +6,31 @@ This is the example project used for demonstrating test-driven development (TDD)
 with PHPUnit for TYPO3 CMS in Oliver Klee's workshops.
 
 
+## Installing the extension
+
+### For a TYPO3 installation in Composer mode
+
+Add the following repository and require to the ```composer.json``` of your
+TYPO3 installation:
+
+```
+"repositories": [
+    {
+    "type": "vcs",
+    "url": "https://github.com/oliverklee/coffee.git"
+}
+],
+"require": {
+    "oliverklee/coffee": "*"
+}
+```
+
+### For a TYPO3 installation in classic (non-Composer) mode
+
+Download the extensions as a ZIP from GitHub and upload it in the extension
+manager.
+
+
 ## About me (Oliver Klee)
 
 I am the maintainer of the
