@@ -6,6 +6,7 @@
 *.swp
 .buildpath
 .cache
+.php_cs.cache
 .project
 .session
 .settings
