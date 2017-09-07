@@ -21,7 +21,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  *
  * @author Oliver Klee <typo3-coding@oliverklee.de>
  */
-class FlavorTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class FlavorTest extends \Nimut\TestingFramework\TestCase\UnitTestCase
 {
     /**
      * @var bool

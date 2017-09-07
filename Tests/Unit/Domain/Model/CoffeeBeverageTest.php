@@ -20,7 +20,7 @@ use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
  *
  * @author Oliver Klee <typo3-coding@oliverklee.de>
  */
-class CoffeeBeverageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class CoffeeBeverageTest extends \Nimut\TestingFramework\TestCase\UnitTestCase
 {
     /**
      * @var bool
