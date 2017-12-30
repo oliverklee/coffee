@@ -1,7 +1,7 @@
 {
     "name": "oliverklee/coffee",
-    "type": "typo3-cms-extension",
     "description": "Demo extension for PHPUnit workshops with TYPO3.",
+    "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3",
         "extension",
@@ -10,22 +10,12 @@
         "unit testing"
     ],
     "homepage": "https://www.oliverklee.de",
+    "license": "GPL-3.0+",
     "authors": [
         {
             "name": "Oliver Klee",
             "role": "Developer",
             "homepage": "https://www.oliverklee.de"
-        }
-    ],
-    "license": "GPL-3.0+",
-    "replace": {
-        "coffee": "self.version",
-        "typo3-ter/coffee": "self.version"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
         }
     ],
     "require": {
@@ -38,6 +28,26 @@
         "phpunit/phpunit": "^5.7.0",
         "mikey179/vfsStream": "^1.6.0"
     },
+    "replace": {
+        "coffee": "self.version",
+        "typo3-ter/coffee": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "OliverKlee\\Coffee\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OliverKlee\\Coffee\\Tests\\": "Tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
     "config": {
         "vendor-dir": ".Build/vendor",
         "bin-dir": ".Build/bin"
@@ -47,12 +57,6 @@
             "mkdir -p .Build/Web/typo3conf/ext/",
             "[ -L .Build/Web/typo3conf/ext/coffee ]|| ln -snvf ../../../../. .Build/Web/typo3conf/ext/coffee"
         ]
-    },
-    "autoload": {
-        "psr-4": {
-            "OliverKlee\\Coffee\\": "Classes/",
-            "OliverKlee\\Coffee\\Tests\\": "Tests/"
-        }
     },
     "extra": {
         "typo3/cms": {
