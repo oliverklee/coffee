@@ -1,7 +1,6 @@
 {
     "name": "oliverklee/coffee",
     "type": "typo3-cms-extension",
-    "version": "1.0.0",
     "description": "Demo extension for PHPUnit workshops with TYPO3.",
     "keywords": [
         "TYPO3",
@@ -18,9 +17,7 @@
             "homepage": "https://www.oliverklee.de"
         }
     ],
-    "license": [
-        "GPL-2.0+"
-    ],
+    "license": "GPL-3.0+",
     "replace": {
         "coffee": "self.version",
         "typo3-ter/coffee": "self.version"
