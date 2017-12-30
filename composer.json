@@ -30,8 +30,7 @@
     ],
     "require": {
         "php": "~7.0.0 || ~7.1.0",
-        "typo3/cms": "^8.7.0",
-        "roave/security-advisories": "dev-master"
+        "typo3/cms": "^8.7.0"
     },
     "require-dev": {
         "namelesscoder/typo3-repository-client": "^1.2.0",
