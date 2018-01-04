@@ -1,6 +1,10 @@
 # Coffee example
 
-[![Flattr this git repo](https://button.flattr.com/flattr-badge-large.png)](https://flattr.com/submit/auto?fid=45y2xw&url=https%3A%2F%2Fgithub.com%2Foliverklee%2Fcoffee)
+[![Build Status](https://travis-ci.org/oliverklee/coffee.svg?branch=master)](https://travis-ci.org/oliverklee/coffee)
+[![Latest Stable Version](https://poser.pugx.org/oliverklee/coffee/v/stable.svg)](https://packagist.org/packages/oliverklee/coffee)
+[![Total Downloads](https://poser.pugx.org/oliverklee/coffee/downloads.svg)](https://packagist.org/packages/oliverklee/coffee)
+[![Latest Unstable Version](https://poser.pugx.org/oliverklee/coffee/v/unstable.svg)](https://packagist.org/packages/oliverklee/coffee)
+[![License](https://poser.pugx.org/oliverklee/coffee/license.svg)](https://packagist.org/packages/oliverklee/coffee)
 
 This is the example project used for demonstrating test-driven development (TDD)
 with PHPUnit for TYPO3 CMS in Oliver Klee's workshops.
@@ -10,18 +14,12 @@ with PHPUnit for TYPO3 CMS in Oliver Klee's workshops.
 
 ### For a TYPO3 installation in Composer mode
 
-Add the following repository and require to the ```composer.json``` of your
+Add the following repository and require to the `composer.json` of your
 TYPO3 installation:
 
-```
-"repositories": [
-    {
-    "type": "vcs",
-    "url": "https://github.com/oliverklee/coffee.git"
-}
-],
+```json
 "require": {
-    "oliverklee/coffee": "*"
+    "oliverklee/coffee": "@dev"
 }
 ```
 
