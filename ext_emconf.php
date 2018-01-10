@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Coffee example',
-    'description' => 'Demo extension for PHPUnit workshops with TYPO3',
+    'description' => 'Example extension workshops on TDD with TYPO3 and PHPUnit',
     'category' => 'plugin',
     'author' => 'Oliver Klee',
     'author_email' => 'typo3-coding@oliverklee.de',
@@ -30,6 +30,7 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '1.0.0',
     'constraints' => [
         'depends' => [
+            'php' => '7.0.0-7.2.99',
             'typo3' => '7.6.0-8.7.99',
         ],
         'conflicts' => [
@@ -40,6 +41,10 @@ $EM_CONF[$_EXTKEY] = [
     'autoload' => [
         'psr-4' => [
             'OliverKlee\\Coffee\\' => 'Classes/',
+        ],
+    ],
+    'autoload-dev' => [
+        'psr-4' => [
             'OliverKlee\\Coffee\\Tests\\' => 'Tests/',
         ],
     ],

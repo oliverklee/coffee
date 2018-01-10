@@ -1,25 +1,28 @@
 {
     "name": "oliverklee/coffee",
-    "description": "Demo extension for PHPUnit workshops with TYPO3.",
+    "description": "Example extension workshops on TDD with TYPO3 and PHPUnit",
     "type": "typo3-cms-extension",
     "keywords": [
-        "TYPO3",
-        "extension",
+        "example",
         "tdd",
-        "phpunit",
         "unit testing"
     ],
-    "homepage": "https://www.oliverklee.de",
-    "license": "GPL-3.0+",
+    "homepage": "https://github.com/oliverklee/tdd-reader",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Oliver Klee",
-            "role": "Developer",
-            "homepage": "https://www.oliverklee.de"
+            "email": "typo3-coding@oliverklee.de",
+            "homepage": "https://www.oliverklee.de",
+            "role": "developer"
         }
     ],
+    "support": {
+        "source": "https://github.com/oliverklee/coffee",
+        "issues": "https://github.com/oliverklee/coffee/issues"
+    },
     "require": {
-        "php": "~7.0.0 || ~7.1.0",
+        "php": "~7.0.0 || ~7.1.0 || ~7.2.0",
         "typo3/cms": "^8.7.0"
     },
     "require-dev": {
