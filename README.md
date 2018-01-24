@@ -29,6 +29,13 @@ Download the extensions as a ZIP from GitHub and upload it in the extension
 manager.
 
 
+## Creating new extensions with automated tests
+
+For creating new extensions, I recommend taking
+[Helmut Hummel's extension skeleton](https://github.com/helhum/ext_scaffold)
+as a starting point.
+
+
 ## About me (Oliver Klee)
 
 I am the maintainer of the
