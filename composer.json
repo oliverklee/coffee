@@ -23,7 +23,7 @@
     },
     "require": {
         "php": "~7.0.0 || ~7.1.0 || ~7.2.0",
-        "typo3/cms": "^8.7.0"
+        "typo3/cms": "^7.6.23 || ^8.7.9"
     },
     "require-dev": {
         "nimut/testing-framework": "^2.0.0",
