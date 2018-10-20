@@ -19,7 +19,7 @@ cache:
   - $HOME/.composer/cache
 
 before_install:
-- phpenv config-rm xdebug.ini
+- phpenv config-rm xdebug.ini || echo "xdebug not available"
 
 install:
 - composer require-typo3-version "$TYPO3_VERSION"
