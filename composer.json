@@ -26,10 +26,10 @@
         "typo3/cms": "^7.6.23 || ^8.7.9"
     },
     "require-dev": {
-        "nimut/testing-framework": "^2.0.0",
-        "helhum/typo3-composer-setup": "^0.5.1",
-        "phpunit/phpunit": "^5.7.0",
-        "mikey179/vfsStream": "^1.6.0"
+        "nimut/testing-framework": "^4.1",
+        "helhum/typo3-composer-setup": "^0.5.3",
+        "phpunit/phpunit": "^6.0",
+        "mikey179/vfsStream": "^1.6"
     },
     "replace": {
         "coffee": "self.version",
