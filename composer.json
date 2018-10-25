@@ -45,6 +45,7 @@
             "OliverKlee\\Coffee\\Tests\\": "Tests/"
         }
     },
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "composer",
@@ -52,6 +53,9 @@
         }
     ],
     "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
         "vendor-dir": ".Build/vendor"
     },
     "scripts": {
