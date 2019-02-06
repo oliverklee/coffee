@@ -29,7 +29,7 @@
         "nimut/testing-framework": "^4.1",
         "helhum/typo3-composer-setup": "^0.5.3",
         "phpunit/phpunit": "^6.0",
-        "mikey179/vfsStream": "^1.6"
+        "mikey179/vfsstream": "^1.6"
     },
     "replace": {
         "coffee": "self.version",
