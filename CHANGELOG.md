@@ -15,4 +15,4 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
-
+- Fix the casing of the vfsstream package (#8)
