@@ -3,15 +3,12 @@ sudo: false
 language: php
 
 php:
-- 7.0
-- 7.1
+- "7.0"
+- "7.1"
 
 env:
 - TYPO3_VERSION="^7.6"
 - TYPO3_VERSION="^8.7"
-
-matrix:
-  exclude:
 
 cache:
   directories:
