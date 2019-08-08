@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Composer script for PHP linting
 
 ### Changed
+- Change license from GPL V3+ to GPL V2+ (#9)
 
 ### Deprecated
 
