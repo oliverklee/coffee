@@ -32,7 +32,6 @@
         "mikey179/vfsstream": "^1.6"
     },
     "replace": {
-        "coffee": "self.version",
         "typo3-ter/coffee": "self.version"
     },
     "autoload": {
