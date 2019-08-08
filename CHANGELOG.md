@@ -16,5 +16,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Drop an obsolete "replace" entry from composer.json (#11)
 - Streamline the .travis.yml (#10)
 - Fix the casing of the vfsstream package (#8)
