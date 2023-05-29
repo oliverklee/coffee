@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers \OliverKlee\Coffee\Domain\Model\CoffeeBeverage
  */
-class CoffeeBeverageTest extends TestCase
+final class CoffeeBeverageTest extends TestCase
 {
     /**
      * @var bool

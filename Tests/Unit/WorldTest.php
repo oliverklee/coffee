@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @coversNothing
  */
-class WorldTest extends TestCase
+final class WorldTest extends TestCase
 {
     /**
      * @test

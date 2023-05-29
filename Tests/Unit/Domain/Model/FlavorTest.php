@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers \OliverKlee\Coffee\Domain\Model\Flavor
  */
-class FlavorTest extends TestCase
+final class FlavorTest extends TestCase
 {
     /**
      * @var Flavor
