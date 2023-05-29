@@ -1,0 +1,149 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+
+on:
+  push:
+  schedule:
+    - cron: '45 3 * * 1'
+
+name: CI
+
+jobs:
+  composer-validate:
+    name: Composer validate
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          coverage: none
+          tools: composer:v2
+
+      - name: Show Composer version
+        run: composer --version
+
+      - name: Show the Composer configuration
+        run: composer config --global --list
+
+      - name: Validate the root composer.json
+        run: composer validate --no-check-lock
+
+  php-lint:
+    name: PHP Lint
+
+    runs-on: ubuntu-22.04
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.1"
+          - "8.2"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+          tools: composer:v2
+
+      - name: Show the Composer configuration
+        run: composer config --global --list
+
+      - name: Lint all own PHP files
+        run: composer ci:php:lint
+
+  static-analysis:
+    name: Static Analysis
+
+    runs-on: ubuntu-22.04
+
+    needs: [ php-lint, composer-validate ]
+
+    strategy:
+      matrix:
+        command:
+          - composer:normalize
+          - composer:psr-verify
+          - php:fixer
+          - php:sniff
+          - php:stan
+        php-version:
+          - "8.1"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+          tools: composer:v2
+
+      - name: Show the Composer configuration
+        run: composer config --global --list
+
+      - name: Cache dependencies installed with Composer
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/composer
+          key: php${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            php${{ matrix.php-version }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --no-progress
+
+      - name: Run Command
+        run: composer ci:${{ matrix.command }}
+
+  tests:
+    name: PHPUnit Tests
+
+    runs-on: ubuntu-22.04
+
+    needs: [ php-lint, composer-validate ]
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.1"
+          - "8.2"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+          tools: composer:v2
+
+      - name: Show the Composer configuration
+        run: composer config --global --list
+
+      - name: Cache dependencies installed with Composer
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/composer
+          key: php${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            php${{ matrix.php-version }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --no-progress
+
+      - name: Run the tests
+        run: composer ci:tests:unit
