@@ -31,7 +31,7 @@ jobs:
         run: composer config --global --list
 
       - name: Validate the root composer.json
-        run: composer validate --no-check-lock
+        run: composer validate
 
   php-lint:
     name: PHP Lint
