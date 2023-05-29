@@ -71,7 +71,7 @@
 			"@ci:composer:normalize",
 			"@ci:composer:psr-verify"
 		],
-		"ci:composer:normalize": "@composer normalize --no-check-lock --dry-run",
+		"ci:composer:normalize": "@composer normalize --dry-run",
 		"ci:composer:psr-verify": "@composer dumpautoload --optimize --strict-psr",
 		"ci:php": [
 			"@ci:php:fixer",
@@ -92,7 +92,7 @@
 			"@fix:composer",
 			"@fix:php"
 		],
-		"fix:composer": "@composer normalize --no-check-lock",
+		"fix:composer": "@composer normalize",
 		"fix:php": [
 			"@fix:php:cs",
 			"@fix:php:sniff"
