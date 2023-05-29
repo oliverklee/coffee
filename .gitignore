@@ -2,6 +2,7 @@
 /.php-cs-fixer.cache
 /.php_cs.cache
 /.phpunit.cache
+/.phpunit.result.cache
 /composer.lock
 /nbproject
 /vendor
