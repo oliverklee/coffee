@@ -22,8 +22,6 @@ class Flavor
 
     /**
      * @param string $title
-     *
-     * @return void
      */
     public function setTitle($title)
     {

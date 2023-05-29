@@ -13,7 +13,7 @@ final class FlavorTest extends TestCase
     /**
      * @var Flavor
      */
-    protected $subject = null;
+    protected $subject;
 
     protected function setUp(): void
     {

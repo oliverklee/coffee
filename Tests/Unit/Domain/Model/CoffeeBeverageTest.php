@@ -18,7 +18,7 @@ final class CoffeeBeverageTest extends TestCase
     /**
      * @var CoffeeBeverage
      */
-    protected $subject = null;
+    protected $subject;
 
     protected function setUp(): void
     {
