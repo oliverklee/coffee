@@ -5,11 +5,6 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 use OliverKlee\Coffee\Domain\Model\Flavor;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Test case.
- *
- * @author Oliver Klee <typo3-coding@oliverklee.de>
- */
 class FlavorTest extends TestCase
 {
     /**

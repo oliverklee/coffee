@@ -3,9 +3,7 @@
 namespace OliverKlee\Coffee\Domain\Model;
 
 /**
- * This model represents a coffee flavor.
- *
- * @author Oliver Klee <typo3-coding@oliverklee.de>
+ * A coffee flavor.
  */
 class Flavor
 {

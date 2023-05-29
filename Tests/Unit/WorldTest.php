@@ -4,9 +4,6 @@ namespace OliverKlee\Coffee\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
-/**
- * Test case.
- */
 class WorldTest extends TestCase
 {
     /**
