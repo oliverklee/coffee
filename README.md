@@ -7,33 +7,7 @@
 [![License](https://poser.pugx.org/oliverklee/coffee/license.svg)](https://packagist.org/packages/oliverklee/coffee)
 
 This is the example project used for demonstrating test-driven development (TDD)
-with PHPUnit for TYPO3 CMS in Oliver Klee's workshops.
-
-
-## Installing the extension
-
-### For a TYPO3 installation in Composer mode
-
-Add the following repository and require to the `composer.json` of your
-TYPO3 installation:
-
-```json
-"require": {
-    "oliverklee/coffee": "@dev"
-}
-```
-
-### For a TYPO3 installation in classic (non-Composer) mode
-
-Download the extensions as a ZIP from GitHub and upload it in the extension
-manager.
-
-
-## Creating new extensions with automated tests
-
-For creating new extensions, I recommend taking
-[Helmut Hummel's extension skeleton](https://github.com/helhum/ext_scaffold)
-as a starting point.
+with PHPUnit in Oliver Klee's workshops.
 
 
 ## About me (Oliver Klee)
@@ -57,11 +31,7 @@ I also frequently give workshops at the TYPO3 Developer Days.
 
 ## Other example projects
 
-* [Tea example](https://github.com/oliverklee/ext_tea)
-  for unit tests for extbase extensions for TYPO3 CMS
-* [Selenium demo](https://github.com/oliverklee/selenium-demo)
-  for using Selenium with PHPUnit
+* [Tea example](https://github.com/TYPO3-Documentation/tea/)
+  for unit tests for Extbase extensions for TYPO3
 * [Anagram finder](https://github.com/oliverklee/anagram-finder)
   is the finished result of a code kata for TDD
-* [TDD Seed](https://github.com/oliverklee/tdd-seed)
-  for starting PHPUnit projects with Composer (without TYPO3 CMS)

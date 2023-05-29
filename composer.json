@@ -1,6 +1,6 @@
 {
     "name": "oliverklee/coffee",
-    "description": "Example extension workshops on TDD with TYPO3 and PHPUnit",
+    "description": "Example extension workshops on TDD with PHPUnit",
     "type": "typo3-cms-extension",
     "keywords": [
         "example",
@@ -12,7 +12,7 @@
     "authors": [
         {
             "name": "Oliver Klee",
-            "email": "typo3-coding@oliverklee.de",
+            "email": "github@oliverklee.de",
             "homepage": "https://www.oliverklee.de",
             "role": "developer"
         }
@@ -22,17 +22,10 @@
         "issues": "https://github.com/oliverklee/coffee/issues"
     },
     "require": {
-        "php": "~7.0.0 || ~7.1.0 || ~7.2.0",
-        "typo3/cms": "^7.6.23 || ^8.7.9"
+        "php": "~7.0.0 || ~7.1.0 || ~7.2.0"
     },
     "require-dev": {
-        "nimut/testing-framework": "^4.1",
-        "helhum/typo3-composer-setup": "^0.5.3",
-        "phpunit/phpunit": "^6.0",
-        "mikey179/vfsstream": "^1.6"
-    },
-    "replace": {
-        "typo3-ter/coffee": "self.version"
+        "phpunit/phpunit": "^6.0"
     },
     "autoload": {
         "psr-4": {
@@ -48,8 +41,7 @@
     "config": {
         "preferred-install": {
             "*": "dist"
-        },
-        "vendor-dir": ".Build/vendor"
+        }
     },
     "scripts": {
         "ci:php:lint": "find *.php Classes/ Configuration/ Tests/ -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
@@ -58,26 +50,11 @@
         ],
         "ci": [
             "@ci:static"
-        ],
-        "require-typo3-version": [
-            "@php -r '$conf=json_decode(file_get_contents(__DIR__.\"/composer.json\"),true);$conf[\"require\"][\"typo3/cms-core\"]=$_SERVER[\"argv\"][1];file_put_contents(__DIR__.\"/composer.json\",json_encode($conf,JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT).chr(10));'",
-            "@composer install"
-        ],
-        "link-extension": [
-            "@php -r 'is_dir($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/\") || mkdir($extFolder, 0777, true);'",
-            "@php -r 'file_exists($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/coffee\") || symlink(__DIR__,$extFolder);'"
-        ],
-        "post-autoload-dump": [
-            "@link-extension"
         ]
     },
     "extra": {
         "branch-alias": {
             "dev-master": "2.0.x-dev"
-        },
-        "typo3/cms": {
-            "cms-package-dir": "{$vendor-dir}/typo3/cms",
-            "web-dir": ".Build/public"
         }
     }
 }
