@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace OliverKlee\Coffee\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
@@ -12,11 +14,8 @@ final class WorldTest extends TestCase
     /**
      * @test
      */
-    public function universeHasSpaceTimeContinuum()
+    public function universeHasSpaceTimeContinuum(): void
     {
-        self::assertSame(
-            4,
-            2 + 2
-        );
+        self::assertSame(4, 2 + 2);
     }
 }

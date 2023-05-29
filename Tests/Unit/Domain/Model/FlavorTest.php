@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 
 use OliverKlee\Coffee\Domain\Model\Flavor;
@@ -10,10 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class FlavorTest extends TestCase
 {
-    /**
-     * @var Flavor
-     */
-    protected $subject;
+    private Flavor $subject;
 
     protected function setUp(): void
     {
@@ -23,7 +22,7 @@ final class FlavorTest extends TestCase
     /**
      * @test
      */
-    public function canBeInstantiated()
+    public function canBeInstantiated(): void
     {
         self::assertInstanceOf(Flavor::class, $this->subject);
     }
@@ -31,7 +30,7 @@ final class FlavorTest extends TestCase
     /**
      * @test
      */
-    public function getTitleInitiallyReturnsEmptyString()
+    public function getTitleInitiallyReturnsEmptyString(): void
     {
         self::assertSame('', $this->subject->getTitle());
     }
@@ -39,7 +38,7 @@ final class FlavorTest extends TestCase
     /**
      * @test
      */
-    public function setTitleSetsTitle()
+    public function setTitleSetsTitle(): void
     {
         $title = 'Chocolate';
 

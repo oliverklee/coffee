@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace OliverKlee\Coffee\Domain\Model;
 
 /**
@@ -7,23 +9,14 @@ namespace OliverKlee\Coffee\Domain\Model;
  */
 class Flavor
 {
-    /**
-     * @var string
-     */
-    protected $title = '';
+    protected string $title = '';
 
-    /**
-     * @return string
-     */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @param string $title
-     */
-    public function setTitle($title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
