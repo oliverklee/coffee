@@ -1,10 +1,13 @@
 <?php
+
 namespace OliverKlee\Coffee\Tests\Unit;
+
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test case.
  */
-class WorldTest extends \Nimut\TestingFramework\TestCase\UnitTestCase
+class WorldTest extends TestCase
 {
     /**
      * @var bool
