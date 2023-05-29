@@ -5,6 +5,9 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers \OliverKlee\Coffee\Domain\Model\CoffeeBeverage
+ */
 class CoffeeBeverageTest extends TestCase
 {
     /**
