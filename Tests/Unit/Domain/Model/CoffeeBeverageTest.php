@@ -17,7 +17,7 @@ class CoffeeBeverageTest extends TestCase
      */
     protected $subject = null;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->subject = new CoffeeBeverage();
     }

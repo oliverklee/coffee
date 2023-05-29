@@ -8,16 +8,11 @@ use PHPUnit\Framework\TestCase;
 class FlavorTest extends TestCase
 {
     /**
-     * @var bool
-     */
-    protected $backupGlobals = false;
-
-    /**
      * @var Flavor
      */
     protected $subject = null;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->subject = new Flavor();
     }
@@ -27,7 +22,7 @@ class FlavorTest extends TestCase
      */
     public function canBeInstantiated()
     {
-        self::assertInstanceOf(AbstractEntity::class, $this->subject);
+        self::assertInstanceOf(Flavor::class, $this->subject);
     }
 
     /**

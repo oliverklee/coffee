@@ -7,11 +7,6 @@ use PHPUnit\Framework\TestCase;
 class WorldTest extends TestCase
 {
     /**
-     * @var bool
-     */
-    protected $backupGlobals = false;
-
-    /**
      * @test
      */
     public function universeHasSpaceTimeContinuum()
