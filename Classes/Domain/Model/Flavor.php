@@ -9,7 +9,7 @@ namespace OliverKlee\Coffee\Domain\Model;
  */
 class Flavor
 {
-    protected string $title = '';
+    private string $title = '';
 
     public function getTitle(): string
     {
