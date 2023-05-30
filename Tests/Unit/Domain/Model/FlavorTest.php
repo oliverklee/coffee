@@ -22,14 +22,6 @@ final class FlavorTest extends TestCase
     /**
      * @test
      */
-    public function canBeInstantiated(): void
-    {
-        self::assertInstanceOf(Flavor::class, $this->subject);
-    }
-
-    /**
-     * @test
-     */
     public function getTitleInitiallyReturnsEmptyString(): void
     {
         self::assertSame('', $this->subject->getTitle());
