@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0923fe07a629c28315e78725500981a",
+    "content-hash": "e85841604cbcad1e594d5dc18ea7b294",
     "packages": [],
     "packages-dev": [
         {
@@ -772,16 +772,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.17.0",
+            "version": "v3.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "3f0ed862f22386c55a767461ef5083bddceeed79"
+                "reference": "b123395c9fa3a70801f816f13606c0f3a7ada8df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/3f0ed862f22386c55a767461ef5083bddceeed79",
-                "reference": "3f0ed862f22386c55a767461ef5083bddceeed79",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/b123395c9fa3a70801f816f13606c0f3a7ada8df",
+                "reference": "b123395c9fa3a70801f816f13606c0f3a7ada8df",
                 "shasum": ""
             },
             "require": {
@@ -856,7 +856,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.17.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.18.0"
             },
             "funding": [
                 {
@@ -864,7 +864,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-22T19:59:32+00:00"
+            "time": "2023-06-18T22:25:45+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
