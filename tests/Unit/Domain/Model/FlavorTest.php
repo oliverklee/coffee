@@ -7,9 +7,7 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 use OliverKlee\Coffee\Domain\Model\Flavor;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \OliverKlee\Coffee\Domain\Model\Flavor
- */
+#[\PHPUnit\Framework\Attributes\CoversClass(\OliverKlee\Coffee\Domain\Model\Flavor::class)]
 final class FlavorTest extends TestCase
 {
     private Flavor $subject;
@@ -20,17 +18,13 @@ final class FlavorTest extends TestCase
         $this->subject = new Flavor();
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getTitleInitiallyReturnsEmptyString(): void
     {
         self::assertSame('', $this->subject->getTitle());
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setTitleSetsTitle(): void
     {
         $title = 'Chocolate';
