@@ -13,7 +13,7 @@ return RectorConfig::configure()
         __DIR__ . '/src/',
         __DIR__ . '/tests/',
     ])
-    ->withPhpVersion(PhpVersion::PHP_81)
+    ->withPhpVersion(PhpVersion::PHP_83)
     ->withPhpSets(true)
     // Note: We're only enabling a single set by default to improve performance. (Rector needs at least a single set to
     // run.)
@@ -22,19 +22,7 @@ return RectorConfig::configure()
     ->withSets([
         // Rector sets
 
-        // LevelSetList::UP_TO_PHP_53,
-        // LevelSetList::UP_TO_PHP_54,
-        // LevelSetList::UP_TO_PHP_55,
-        // LevelSetList::UP_TO_PHP_56,
-        // LevelSetList::UP_TO_PHP_70,
-        // LevelSetList::UP_TO_PHP_71,
-        // LevelSetList::UP_TO_PHP_72,
-        // LevelSetList::UP_TO_PHP_73,
-        // LevelSetList::UP_TO_PHP_74,
-        // LevelSetList::UP_TO_PHP_80,
-        LevelSetList::UP_TO_PHP_81,
-        // LevelSetList::UP_TO_PHP_82,
-        // LevelSetList::UP_TO_PHP_83,
+        LevelSetList::UP_TO_PHP_83,
 
         // SetList::CODE_QUALITY,
         // SetList::CODING_STYLE,
@@ -44,7 +32,7 @@ return RectorConfig::configure()
         // SetList::NAMING,
         // SetList::PRIVATIZATION,
         // SetList::STRICT_BOOLEANS,
-        // SetList::TYPE_DECLARATION,
+        SetList::TYPE_DECLARATION,
 
         // PHPUnit sets
 
