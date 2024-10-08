@@ -22,7 +22,7 @@
 		"source": "https://github.com/oliverklee/coffee"
 	},
 	"require": {
-		"php": "^8.3"
+		"php": "~8.3.0 || ~8.4.0"
 	},
 	"require-dev": {
 		"ergebnis/composer-normalize": "^2.44.0",
