@@ -14,6 +14,7 @@ final class CoffeeBeverageTest extends TestCase
 {
     private CoffeeBeverage $subject;
 
+    #[\Override]
     protected function setUp(): void
     {
         $this->subject = new CoffeeBeverage();

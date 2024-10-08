@@ -14,6 +14,7 @@ final class FlavorTest extends TestCase
 {
     private Flavor $subject;
 
+    #[\Override]
     protected function setUp(): void
     {
         $this->subject = new Flavor();
