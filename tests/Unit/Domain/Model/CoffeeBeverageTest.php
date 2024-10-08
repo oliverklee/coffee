@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 
 use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-#[\PHPUnit\Framework\Attributes\CoversClass(\OliverKlee\Coffee\Domain\Model\CoffeeBeverage::class)]
+#[CoversClass(CoffeeBeverage::class)]
 final class CoffeeBeverageTest extends TestCase
 {
     private CoffeeBeverage $subject;
@@ -18,7 +20,7 @@ final class CoffeeBeverageTest extends TestCase
         $this->subject = new CoffeeBeverage();
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function canBeInstantiated(): void
     {
         self::assertInstanceOf(CoffeeBeverage::class, $this->subject);
