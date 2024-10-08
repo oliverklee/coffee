@@ -6,8 +6,8 @@ parameters:
   level: 9
 
   paths:
-    - Classes/
-    - Tests/
+    - src/
+    - tests/
 
   # Allow instanceof checks, particularly in tests
   checkAlwaysTrueCheckTypeFunctionCall: false

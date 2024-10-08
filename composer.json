@@ -39,12 +39,12 @@
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
-			"OliverKlee\\Coffee\\": "Classes/"
+			"OliverKlee\\Coffee\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"OliverKlee\\Coffee\\Tests\\": "Tests/"
+			"OliverKlee\\Coffee\\tests\\": "tests/"
 		}
 	},
 	"config": {
@@ -80,7 +80,7 @@
 			"@ci:php:stan"
 		],
 		"ci:php:fixer": "php-cs-fixer fix --dry-run -v --show-progress=dots",
-		"ci:php:lint": "find .*.php *.php Classes Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+		"ci:php:lint": "find .*.php *.php src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
 		"ci:php:rector": "rector process --dry-run",
 		"ci:php:stan": "phpstan --no-progress",
 		"ci:static": [
