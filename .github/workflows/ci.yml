@@ -76,6 +76,7 @@ jobs:
           - composer:normalize
           - composer:psr-verify
           - php:fixer
+          - php:rector
           - php:stan
         php-version:
           - "8.3"

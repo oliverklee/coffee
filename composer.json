@@ -33,6 +33,7 @@
 		"phpstan/phpstan-phpunit": "^1.4.0",
 		"phpstan/phpstan-strict-rules": "^1.6.1",
 		"phpunit/phpunit": "^11.4.1",
+		"rector/rector": "^1.2.6",
 		"typo3/coding-standards": "^0.8.0"
 	},
 	"prefer-stable": true,
@@ -75,10 +76,12 @@
 		"ci:php": [
 			"@ci:php:fixer",
 			"@ci:php:lint",
+			"@ci:php:rector",
 			"@ci:php:stan"
 		],
 		"ci:php:fixer": "php-cs-fixer fix --dry-run -v --show-progress=dots",
-		"ci:php:lint": "find .*.php Classes Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+		"ci:php:lint": "find .*.php *.php Classes Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+		"ci:php:rector": "rector process --dry-run",
 		"ci:php:stan": "phpstan --no-progress",
 		"ci:static": [
 			"@ci:composer",
@@ -91,9 +94,11 @@
 		],
 		"fix:composer": "@composer normalize",
 		"fix:php": [
+			"@fix:php:rector",
 			"@fix:php:cs"
 		],
 		"fix:php:cs": "php-cs-fixer fix --config .php-cs-fixer.php",
+		"fix:php:rector": "rector process",
 		"phpstan:baseline": "phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline"
 	},
 	"scripts-descriptions": {
@@ -104,6 +109,7 @@
 		"ci:php": "Runs all static checks for PHP files.",
 		"ci:php:fixer": "Checks the code style with the PHP Coding Standards Fixer (PHP-CS-Fixer).",
 		"ci:php:lint": "Lints the PHP files for syntax errors.",
+		"ci:php:rector": "Checks for code for changes by Rector.",
 		"ci:php:stan": "Checks the PHP types using PHPStan.",
 		"ci:static": "Runs all static code checks (syntax, style, types).",
 		"ci:tests:unit": "Runs the unit tests.",
@@ -111,6 +117,7 @@
 		"fix:composer": "Normalizes all composer.json files.",
 		"fix:php": "Runs all fixers for the PHP code.",
 		"fix:php:cs": "Fixes the code style with PHP-CS-Fixer.",
+		"fix:php:rector": "Updates the code with Rector.",
 		"phpstan:baseline": "Updates the PHPStan baseline file to match the code."
 	}
 }
