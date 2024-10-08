@@ -35,4 +35,5 @@ return RectorConfig::configure()
         PHPUnitSetList::PHPUNIT_100,
         PHPUnitSetList::PHPUNIT_110,
         // PHPUnitSetList::PHPUNIT_CODE_QUALITY,
-    ]);
+    ])
+    ->withImportNames(importShortClasses: false, removeUnusedImports: true);
