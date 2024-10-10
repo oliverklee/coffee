@@ -90,9 +90,9 @@
 		"fix:composer": "@composer normalize",
 		"fix:php": [
 			"@fix:php:rector",
-			"@fix:php:cs"
+			"@fix:php:fixer"
 		],
-		"fix:php:cs": "php-cs-fixer fix --config .php-cs-fixer.php",
+		"fix:php:fixer": "php-cs-fixer fix --config .php-cs-fixer.php",
 		"fix:php:rector": "rector process",
 		"phpstan:baseline": "phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline"
 	},
@@ -111,7 +111,7 @@
 		"fix": "Runs all automatic code style fixes.",
 		"fix:composer": "Normalizes all composer.json files.",
 		"fix:php": "Runs all fixers for the PHP code.",
-		"fix:php:cs": "Fixes the code style with PHP-CS-Fixer.",
+		"fix:php:fixer": "Fixes the code style with PHP-CS-Fixer.",
 		"fix:php:rector": "Updates the code with Rector.",
 		"phpstan:baseline": "Updates the PHPStan baseline file to match the code."
 	}
