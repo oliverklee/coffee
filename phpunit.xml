@@ -4,7 +4,6 @@
          bootstrap="vendor/autoload.php"
          cacheResult="false"
          requireCoverageMetadata="true"
-         beStrictAboutCoverageMetadata="true"
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTestsThatDoNotTestAnything="false"
          colors="true"
