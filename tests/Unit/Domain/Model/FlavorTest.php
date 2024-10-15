@@ -12,27 +12,23 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(Flavor::class)]
 final class FlavorTest extends TestCase
 {
-    private Flavor $subject;
-
-    #[\Override]
-    protected function setUp(): void
-    {
-        $this->subject = new Flavor();
-    }
-
     #[Test]
-    public function getTitleInitiallyReturnsEmptyString(): void
-    {
-        self::assertSame('', $this->subject->getTitle());
-    }
-
-    #[Test]
-    public function setTitleSetsTitle(): void
+    public function getTitleReturnsTitleSetInConstruction(): void
     {
         $title = 'Chocolate';
 
-        $this->subject->setTitle($title);
+        $subject = new Flavor($title);
 
-        self::assertSame($title, $this->subject->getTitle());
+        self::assertSame($title, $subject->getTitle());
+    }
+
+    #[Test]
+    public function providingEmptyTitleInConstructorThrowsException(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Title must not be empty.');
+        $this->expectExceptionCode(1728990117);
+
+        new Flavor('');
     }
 }

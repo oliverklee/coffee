@@ -7,17 +7,17 @@ namespace OliverKlee\Coffee\Domain\Model;
 /**
  * A coffee flavor.
  */
-class Flavor
+readonly class Flavor
 {
-    private string $title = '';
+    public function __construct(private string $title)
+    {
+        if ($title === '') {
+            throw new \InvalidArgumentException('Title must not be empty.', 1728990117);
+        }
+    }
 
     public function getTitle(): string
     {
         return $this->title;
-    }
-
-    public function setTitle(string $title): void
-    {
-        $this->title = $title;
     }
 }
