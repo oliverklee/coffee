@@ -18,6 +18,13 @@ class CoffeeBeverage
      */
     private array $flavors = [];
 
+    private Price $price;
+
+    public function __construct()
+    {
+        $this->price = new Price();
+    }
+
     public function getTitle(): string
     {
         $flavorTitles = [];
@@ -51,5 +58,15 @@ class CoffeeBeverage
     public function addFlavor(Flavor $flavor): void
     {
         $this->flavors[] = $flavor;
+    }
+
+    public function getPrice(): Price
+    {
+        return $this->price;
+    }
+
+    public function setPrice(Price $price): void
+    {
+        $this->price = $price;
     }
 }

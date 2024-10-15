@@ -6,6 +6,7 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 
 use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
 use OliverKlee\Coffee\Domain\Model\Flavor;
+use OliverKlee\Coffee\Domain\Model\Price;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -100,5 +101,30 @@ final class CoffeeBeverageTest extends TestCase
 
         $expected = $flavorTitle1 . ' ' . $flavorTitle2 . ' ' . $coffeeTitle;
         self::assertSame($expected, $result);
+    }
+
+    #[Test]
+    public function getPriceForBeverageInitiallyReturnsPrice(): void
+    {
+        self::assertInstanceOf(Price::class, $this->subject->getPrice());
+    }
+
+    #[Test]
+    public function getPriceForBeverageReturnsPriceInstance(): void
+    {
+        $price = new Price();
+
+        $this->subject->setPrice($price);
+
+        self::assertInstanceOf(Price::class, $this->subject->getPrice());
+    }
+
+    #[Test]
+    public function getPriceForBeverageReturnsPriceSet(): void
+    {
+        $price = new Price();
+        $this->subject->setPrice($price);
+
+        self::assertSame($price, $this->subject->getPrice());
     }
 }
