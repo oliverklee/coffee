@@ -7,6 +7,7 @@ namespace OliverKlee\Coffee\Tests\Unit\Domain\Model;
 use OliverKlee\Coffee\Domain\Model\CoffeeBeverage;
 use OliverKlee\Coffee\Domain\Model\Flavor;
 use OliverKlee\Coffee\Domain\Model\Price;
+use OliverKlee\Coffee\Domain\Model\Priced;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -70,6 +71,12 @@ final class CoffeeBeverageTest extends TestCase
         $this->expectExceptionCode(1728987200);
 
         $this->subject->setSize(-1);
+    }
+
+    #[Test]
+    public function coffeeBeverageImplementsPriced(): void
+    {
+        self::assertInstanceOf(Priced::class, $this->subject);
     }
 
     #[Test]

@@ -7,7 +7,7 @@ namespace OliverKlee\Coffee\Domain\Model;
 /**
  * A coffee beverage.
  */
-class CoffeeBeverage
+class CoffeeBeverage implements Priced
 {
     private string $title = '';
 
@@ -60,6 +60,7 @@ class CoffeeBeverage
         $this->flavors[] = $flavor;
     }
 
+    #[\Override]
     public function getPrice(): Price
     {
         return $this->price;

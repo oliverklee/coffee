@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\Coffee\Domain\Model;
 
-class Discount
+class Discount implements Priced
 {
     private string $title = '';
 
@@ -25,6 +25,7 @@ class Discount
         $this->title = $title;
     }
 
+    #[\Override]
     public function getPrice(): Price
     {
         return $this->price;

@@ -6,6 +6,7 @@ namespace OliverKlee\Coffee\tests\Unit\Domain\Model;
 
 use OliverKlee\Coffee\Domain\Model\Discount;
 use OliverKlee\Coffee\Domain\Model\Price;
+use OliverKlee\Coffee\Domain\Model\Priced;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -25,6 +26,12 @@ class DiscountTest extends TestCase
     public function discountCanBeInstantiated(): void
     {
         self::assertInstanceOf(Discount::class, $this->subject);
+    }
+
+    #[Test]
+    public function discountImplementsPriced(): void
+    {
+        self::assertInstanceOf(Priced::class, $this->subject);
     }
 
     #[Test]
