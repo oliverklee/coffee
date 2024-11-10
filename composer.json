@@ -33,7 +33,7 @@
 		"phpstan/phpstan-phpunit": "^1.4.0",
 		"phpstan/phpstan-strict-rules": "^1.6.1",
 		"phpunit/phpunit": "^11.4.3",
-		"rector/rector": "^1.2.9",
+		"rector/rector": "^1.2.10",
 		"typo3/coding-standards": "^0.8.0"
 	},
 	"prefer-stable": true,
