@@ -1,2 +1,7 @@
 parameters:
-	ignoreErrors: []
+	ignoreErrors:
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertInstanceOf\(\) with ''OliverKlee\\\\Coffee\\\\Domain\\\\Model\\\\CoffeeBeverage'' and OliverKlee\\Coffee\\Domain\\Model\\CoffeeBeverage will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/Unit/Domain/Model/CoffeeBeverageTest.php
