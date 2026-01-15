@@ -16,10 +16,10 @@
 			"role": "developer"
 		}
 	],
-	"homepage": "https://github.com/oliverklee/tdd-reader",
+	"homepage": "https://github.com/oliverklee-de/tdd-reader",
 	"support": {
-		"issues": "https://github.com/oliverklee/coffee/issues",
-		"source": "https://github.com/oliverklee/coffee"
+		"issues": "https://github.com/oliverklee-de/coffee/issues",
+		"source": "https://github.com/oliverklee-de/coffee"
 	},
 	"require": {
 		"php": "~8.3.0 || ~8.4.0"
