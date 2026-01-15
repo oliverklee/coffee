@@ -15,13 +15,13 @@ I also frequently give workshops at the TYPO3 Developer Days.
 
 ## More Documentation
 
-* [Handout to my workshops on test-driven development (TDD)](https://github.com/oliverklee/tdd-reader)
+* [Handout to my workshops on test-driven development (TDD)](https://github.com/oliverklee-de/tdd-reader)
 
 ## Other example projects
 
 * [Tea example](https://github.com/TYPO3-Documentation/tea/)
   for unit tests for Extbase extensions for TYPO3
-* [Anagram finder](https://github.com/oliverklee/anagram-finder)
+* [Anagram finder](https://github.com/oliverklee-de/anagram-finder)
   is the finished result of a code kata for TDD
-* [Dungeon of bugs](https://github.com/oliverklee/dungeon-of-bugs)
+* [Dungeon of bugs](https://github.com/oliverklee-de/dungeon-of-bugs)
   is the starting point of a more advanced exercise for TDD
